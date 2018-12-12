@@ -18,8 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BurgerBuilder" android:label="@string/burger_builder_label" android:parentActivityName=".MainActivity">
-        </activity>
+        <activity
+            android:name=".BurgerBuilder"
+            android:label="@string/burger_builder_label"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".RecommendationAvtivity"
+            android:label="@string/recommendation_label"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

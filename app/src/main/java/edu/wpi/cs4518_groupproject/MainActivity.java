@@ -16,4 +16,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BurgerBuilder.class);
         startActivity(intent);
     }
+    public void toRecommendationActivity(View view) {
+        Intent intent = new Intent(this, RecommendationAvtivity.class);
+        startActivity(intent);
+    }
 }
