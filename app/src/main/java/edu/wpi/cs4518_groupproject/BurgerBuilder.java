@@ -24,7 +24,6 @@ public class BurgerBuilder extends AppCompatActivity {
     LinearLayout scrollLayout;
     HashMap<CheckBox, Price> priceMap = new HashMap<>();
     Set<Price> burgerComponents = new HashSet<>();
-    private static DecimalFormat priceFormat = new DecimalFormat(".##");
     double totalPrice = 0.0;
 
     @Override
@@ -56,7 +55,6 @@ public class BurgerBuilder extends AppCompatActivity {
 
                     totalPrice = Math.round(totalPrice*100.0)/100.0;
 
-                    Log.d("Total Price", String.valueOf(totalPrice));
                     updateTotalPriceDisplay();
                 }
             });
@@ -81,7 +79,7 @@ public class BurgerBuilder extends AppCompatActivity {
                 prices.add(new Price(nextLine[0], Math.round(Float.parseFloat(nextLine[1])*100.0)/100.0));
             }
         } catch (IOException e) {
-            Log.e("Error", "An Error Occurred Loading");
+            Log.e("Error", "An Error Occurred Loading The Prices");
             e.printStackTrace();
         }
         return prices;
@@ -90,7 +88,6 @@ public class BurgerBuilder extends AppCompatActivity {
     private void updateTotalPriceDisplay(){
         TextView priceView = findViewById(R.id.priceView);
         priceView.setText("Total: $" + String.format("%.2f", totalPrice));
-//        priceView.setText("Total: $" + priceFormat.format(totalPrice));
     }
 
 }
