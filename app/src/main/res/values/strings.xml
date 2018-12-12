@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CS4518_GroupProject</string>
+    <string name="app_name">CS4518 Group Project</string>
+    <string name="burger_builder_label">Burger Builder</string>
 </resources>
